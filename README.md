@@ -9,18 +9,6 @@ incorporando el uso del patrón Page Object Model (POM) junto con PageFactory pa
 
 ---
 
-## Cómo ejecutar el proyecto
-
-Ejecutar los comandos
-```bash
-cd bbd-java-lab
-mvn test
-```
-
-Se generará un archivo en la carpeta "bdd-java-lab/target/HtmlReports" que se podrá descargar y ver el resultado de Cucumber.
-
----
-
 ## Requisitos Previos
 - Java 17+
 - Maven
