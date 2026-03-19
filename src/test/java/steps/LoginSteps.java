@@ -1,30 +1,18 @@
 package steps;
 
-import io.cucumber.java.en.Given;
-import io.cucumber.java.en.When;
-import io.cucumber.java.en.Then;
+import io.cucumber.java.en.*;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
 import static org.junit.Assert.assertTrue;
-import java.util.concurrent.TimeUnit;
-import pages.*;
+import pages.LoginPage;
 
 public class LoginSteps {
+
     WebDriver driver;
     LoginPage loginPage;
 
     @Given("the user is on the login page")
     public void the_user_is_on_the_login_page() {
-        System.setProperty("webdriver.chrome.driver", "/usr/local/bin/chromedriver");
-        ChromeOptions options = new ChromeOptions();
-        options.addArguments("--headless");
-        options.addArguments("--disable-gpu");
-        options.addArguments("--no-sandbox");
-        options.addArguments("--disable-dev-shm-usage");
-        options.addArguments("--remote-allow-origins=*");
-        driver = new ChromeDriver(options);
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        driver = Hooks.driver;
         driver.get("https://the-internet.herokuapp.com/login");
         loginPage = new LoginPage(driver);
     }
@@ -48,6 +36,5 @@ public class LoginSteps {
     @Then("a success {string} should be displayed")
     public void a_success_message_should_be_displayed(String message) {
         assertTrue(driver.getPageSource().contains(message));
-        driver.quit();
     }
 }

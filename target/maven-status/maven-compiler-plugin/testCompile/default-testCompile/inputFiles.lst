@@ -1,5 +1,8 @@
-/workspaces/bdd-selenium-lab/src/test/java/com/example/AppTest.java
-/workspaces/bdd-selenium-lab/src/test/java/pages/LoginPage.java
-/workspaces/bdd-selenium-lab/src/test/java/runners/TestRunner.java
-/workspaces/bdd-selenium-lab/src/test/java/steps/LoginSteps.java
-/workspaces/bdd-selenium-lab/src/test/java/steps/SearchSteps.java
+/workspaces/ARCN-BDD-LAB3-pt2/src/test/java/com/example/AppTest.java
+/workspaces/ARCN-BDD-LAB3-pt2/src/test/java/pages/CheckboxPage.java
+/workspaces/ARCN-BDD-LAB3-pt2/src/test/java/pages/LoginPage.java
+/workspaces/ARCN-BDD-LAB3-pt2/src/test/java/runners/TestRunner.java
+/workspaces/ARCN-BDD-LAB3-pt2/src/test/java/steps/CheckboxSteps.java
+/workspaces/ARCN-BDD-LAB3-pt2/src/test/java/steps/Hooks.java
+/workspaces/ARCN-BDD-LAB3-pt2/src/test/java/steps/LoginSteps.java
+/workspaces/ARCN-BDD-LAB3-pt2/src/test/java/steps/SearchSteps.java

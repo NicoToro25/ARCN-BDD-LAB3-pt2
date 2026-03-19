@@ -7,14 +7,14 @@ import org.openqa.selenium.support.PageFactory;
 
 import java.util.List;
 
-public class CheckboxPages {
+public class CheckboxPage {
 
     WebDriver driver;
 
     @FindBy(css = "input[type='checkbox']")
     List<WebElement> checkboxes;
 
-    public CheckboxPages(WebDriver driver) {
+    public CheckboxPage(WebDriver driver) {
         this.driver = driver;
         PageFactory.initElements(driver, this);
     }
@@ -35,7 +35,7 @@ public class CheckboxPages {
         }
     }
 
-    public void unselectedCheckboxes(int index) {
+    public void unselectCheckbox(int index) {
         if (checkboxes.get(index).isSelected()) {
             checkboxes.get(index).click();
         }

@@ -5,15 +5,16 @@ import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import pages.CheckboxPage;
+import steps.Hooks;
 
-public class CheckboxesSteps(){
+public class CheckboxSteps {
     
     WebDriver driver;
     CheckboxPage page;
 
     @Given("the user is on the checkboxes page")
     public void goToCheckboxPage() {
-        driver = new ChromeDriver();
+        driver = Hooks.driver;
         page = new CheckboxPage(driver);
         page.goToPage();
     }
@@ -46,6 +47,6 @@ public class CheckboxesSteps(){
     @Then("the second checkbox should be unchecked")
     public void secondCheckboxUnchecked() {
         Assert.assertFalse(page.isCheckboxChecked(1));
-        driver.quit();
+        // driver.quit(); // Don't quit the driver here, as it's managed by Hooks
     }
 }
